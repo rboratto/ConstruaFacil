@@ -20,21 +20,35 @@ public class Calc {
         System.out.print("Escolha o Calculo Desejado: ");
 
         // Recebe a opção desejada
-        String opcao = entrada.nextLine();
+        int opcao = entrada.nextInt();
 
         // Pergunta os valores a serem usados no calculo
         System.out.print("Entre o 1º numero: ");
         int num1 = entrada.nextInt();
         System.out.print("Entre o 2º numero: ");
         int num2 = entrada.nextInt();
+
+        if (opcao == 4 && num2 == 0){
+            System.out.println("Não existe divisão por  0");
+            System.out.println();
+            main(args);
+        }
         System.out.print("O resultado é: ");
 
         // Chama a função do calculo desejado
         switch (opcao){
-            case "1":
+            case 1:
                 System.out.println(somarDoisNumeros(num1, num2));
                 break;
-
+            case 2:
+                System.out.println(subtrairDoisNumeros(num1, num2));
+                break;
+            case 3:
+                System.out.println(multiplicarDoisNumeros(num1, num2));
+                break;
+            case 4:
+                System.out.println(dividirDoisNumeros(num1, num2));
+                break;
             default:
                 System.out.println("Opção invalida");
                 break;
@@ -45,4 +59,19 @@ public class Calc {
     public static int somarDoisNumeros(int num1, int num2){
         return num1 + num2;
     }
+    public static int subtrairDoisNumeros(int num1, int num2){
+        return num1 - num2;
+    }
+    public static int multiplicarDoisNumeros(int num1, int num2){
+        return num1 * num2;
+    }
+    public static int dividirDoisNumeros(int num1, int num2){
+        if (num2 ==0){
+            System.out.println("O 2o. número não pode ser 0");
+            return 0;
+        }
+        return num1 / num2;
+    }
+
+
 }
