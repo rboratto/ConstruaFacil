@@ -1,0 +1,23 @@
+{
+  "id": 1004,
+  "category": {
+    "id": 1,
+    "name": "dog"
+  },
+  "name": "Snoopy",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "vermifugado ok"
+    },
+    {
+      "id": 5,
+      "name": "vermifugado ok segunda semana"
+    }
+
+  ],
+  "status": "sold"
+}
